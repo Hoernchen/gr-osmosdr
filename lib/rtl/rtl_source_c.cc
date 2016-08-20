@@ -216,7 +216,7 @@ rtl_source_c::rtl_source_c (const std::string &args)
   sstr.clear();
   sstr <<  "Calling rtlsdr_open with fd: " << fd << "  and path: " << (uspfs_path.c_str()) << std::endl;
   LOGD("omsosdr::rtl", sstr.str().c_str());
-  ret = rtlsdr_open( &_dev, dev_index, fd, uspfs_path.c_str() );
+  ret = rtlsdr_open( &_dev, dev_index );
 #else
   ret = rtlsdr_open( &_dev, dev_index );
 #endif
